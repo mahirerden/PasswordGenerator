@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-
+    
     <title>Password Generator</title>
   </head>
   <body>
@@ -19,7 +19,7 @@
                    <p>Generate a Password</p>
                </div>
           </div>  
-          <form>
+          <form name="formMain">
                <div class="form-row">
                     <div class="col md-12">
                          <label for="passwordLength">Password Length</label> 
@@ -29,19 +29,19 @@
                <div class="form-row">
                     <div class="col md-12 mt-4 rounded">
                          <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                              <input class="form-check-input" type="checkbox" id="checkbox1" value="option1">
                               <label class="form-check-label" for="inlineCheckbox1">Special Characters</label>
                          </div>
                          <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                              <input class="form-check-input" type="checkbox" id="checkbox2" value="option2">
                               <label class="form-check-label" for="inlineCheckbox2">Numeric Characters</label>
                          </div>
                          <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                              <input class="form-check-input" type="checkbox" id="checkbox3" value="option3">
                               <label class="form-check-label" for="inlineCheckbox3">Lowercase Characters</label>
                          </div>
                          <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option4">
+                              <input class="form-check-input" type="checkbox" id="checkbox4" value="option4">
                               <label class="form-check-label" for="inlineCheckbox4">Uppercase Characters</label>
                          </div>
                     </div>
@@ -49,34 +49,22 @@
 
                <div class="form-row border-top border-bottom mt-4">
                     <div class="col md-12 mt-2 text-muted  d-flex justify-content-center align-content-start ">
-                         <!-- <input type="text" id="generatedPassword" class="form-control" placeholder="Your Secure Password" disabled> -->
-                         <p id="generatedPassword">Your Secure Password</p>
+                         <p id="genPass"></p>
                     </div>
                </div> 
 
                <div class="form-row mt-2">
                     <div class="col md-6 d-flex justify-content-start">
-                         <button type="submit" class="btn btn-danger mb-2 rounded-pill btn-lg">Generate Password</button>
+                         <button type="submit" class="btn btn-danger mb-2 rounded-pill btn-lg" onclick="Password()">Generate Password</button>
                     </div>
                     <div class="col md-6 d-flex justify-content-end">
                          <button type="submit" class="btn btn-secondary mb-2 rounded-pill btn-lg">Copy to Clipboard</button>
                     </div>
                </div> 
-
-
           </form>   
-
      </div>
 
-
-     <script>
-        var specialChar = [" ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
-        var upperCaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        var lowerCaseChar = "abcdefghijklmnopqrstuvwxyz";
-        var numericChar = "0123456789";
-
-
-     </script>
+     <script type="text/javascript" src="./assets/js/script.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

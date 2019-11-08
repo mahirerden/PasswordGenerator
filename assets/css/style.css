@@ -7,7 +7,7 @@ body {
      width: 50%;
 }
 
-#generatedPassword{
+#genPass{
      border-style: dashed;
      border-width: 1px;
      height: 120px;
