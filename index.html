@@ -19,7 +19,7 @@
                    <p>Generate a Password</p>
                </div>
           </div>  
-          <form name="formMain">
+          <form name="formMain" action="#" onsubmit="return false">
                <div class="form-row">
                     <div class="col md-12">
                          <label for="passwordLength">Password Length</label> 
@@ -28,40 +28,56 @@
                </div>     
                <div class="form-row">
                     <div class="col md-12 mt-4 rounded">
+                         <div><p class="mt-2 mb-2 h6">Deselect Unwanted Password Character Types:</p></div>
                          <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="checkbox1" value="option1">
+                              <input class="form-check-input" name="chk" type="checkbox" id="checkbox1" value="option1" checked>
                               <label class="form-check-label" for="inlineCheckbox1">Special Characters</label>
-                         </div>
+                          </div>
                          <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="checkbox2" value="option2">
+                              <input class="form-check-input" name="chk" type="checkbox" id="checkbox2" value="option2" checked>
                               <label class="form-check-label" for="inlineCheckbox2">Numeric Characters</label>
                          </div>
                          <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="checkbox3" value="option3">
+                              <input class="form-check-input" name="chk" type="checkbox" id="checkbox3" value="option3" checked>
                               <label class="form-check-label" for="inlineCheckbox3">Lowercase Characters</label>
                          </div>
                          <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="checkbox4" value="option4">
+                              <input class="form-check-input" name="chk" type="checkbox" id="checkbox4" value="option4" checked>
                               <label class="form-check-label" for="inlineCheckbox4">Uppercase Characters</label>
                          </div>
                     </div>
                </div>
 
-               <div class="form-row border-top border-bottom mt-4">
-                    <div class="col md-12 mt-2 text-muted  d-flex justify-content-center align-content-start ">
-                         <p id="genPass"></p>
+               <!-- <div class= "border-top border-bottom mt-4 mb-2">
+                    <div class="text-muted d-flex justify-content-center align-content-start" id="genPass">Your Secure Password</div>
+               </div> -->
+               <!-- <div class="form-row border-top border-bottom mt-4 mb-2">
+                    <div class="col md-12 text-muted d-flex justify-content-center align-content-start ">
+                         <p class= "mt-2 mb-2 p-2 overflow-auto" id="genPass">Your Secure Password</p>
+                    </div>
+               </div>  -->
+               <div class="form-row border-top border-bottom mt-4 mb-2">
+                    <div class="col md-12 text-muted d-flex justify-content-center align-content-start ">
+                         <textarea type="text" class= "mt-2 mb-2 p-2" id="genPass">Your Secure Password</textarea>
                     </div>
                </div> 
 
-               <div class="form-row mt-2">
+               <!-- <div class="form-row border-top border-bottom mt-4 mb-2">
+                    <div class="col md-12 text-muted d-flex justify-content-center align-content-start ">
+                         <input type="text" class= "mt-2 mb-2 p-2" id="genPass" value="Your Secure Password">
+                    </div>
+               </div>  -->
+
+             
+               <div class="form-row mt-4">
                     <div class="col md-6 d-flex justify-content-start">
-                         <button type="submit" class="btn btn-danger mb-2 rounded-pill btn-lg" onclick="Password()">Generate Password</button>
+                         <button type="submit" class="btn btn-danger mb-2 rounded-pill btn-lg" onclick="passwordGenerate()">Generate Password</button>
                     </div>
                     <div class="col md-6 d-flex justify-content-end">
-                         <button type="submit" class="btn btn-secondary mb-2 rounded-pill btn-lg">Copy to Clipboard</button>
+                         <button type="submit" id="copyBtn" class="btn btn-secondary mb-2 rounded-pill btn-lg" onclick="copyFunction()">Copy to Clipboard</button>
                     </div>
                </div> 
-          </form>   
+          </form>  
      </div>
 
      <script type="text/javascript" src="./assets/js/script.js"></script>
