@@ -77,5 +77,4 @@
           var copyText = document.getElementById("genPass");
           copyText.select();
           document.execCommand("Copy");
-          alert("Copied the text: " + copyText);
      }

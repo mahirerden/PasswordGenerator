@@ -27,6 +27,5 @@ Copy to Clipboard button allows the user to copy the provided password.
           var copyText = document.getElementById("genPass");
           copyText.select();
           document.execCommand("Copy");
-          alert("Copied the text: " + copyText);
      }
 ```
