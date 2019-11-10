@@ -9,10 +9,7 @@
           var passwordLength = document.getElementById('passwordLength').value;
           console.log(passwordLength);
           var selected = false;
-          //var genPassword = document.getElementById('genPass');
-          //genPassword.innerHTML = passwordLength;
-          //alert(passwordLength);
-          //document.getElementById("genPass").innerHTML = passwordLength;
+
           if (document.getElementById('checkbox1').checked || 
                document.getElementById('checkbox2').checked || 
                document.getElementById('checkbox3').checked || 
@@ -76,17 +73,9 @@
           return char;
      }
 
-     // $(document).ready(function(){
-     //      $("#copyBtn").click(function(){
-     //           $("#genPass").select();
-     //           document.execCommand('copy');
-     //      });
-     // });
-
      function copyFunction() {
           var copyText = document.getElementById("genPass");
           copyText.select();
-         //copyText.setSelectionRange(0, 99999);
           document.execCommand("Copy");
           alert("Copied the text: " + copyText);
      }
